@@ -1,0 +1,11 @@
+service: nitro-sample
+provider:
+  name: aws
+  stage: prod
+  runtime: nodejs16.x
+  region: us-east-1
+functions:
+  nuxt:
+    handler: .output/server/index.handler
+    events:
+      - httpApi: '*'
